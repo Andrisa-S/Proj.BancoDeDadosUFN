@@ -46,22 +46,13 @@ Sistema Gerenciador de Banco de Dados (SGBD): É o software responsável por ger
  Abordagem para organizar e estruturar dados de forma tabular, em que as informações são armazenadas em tabelas (ou relacionamentos), compostas por linhas e colunas. Esse modelo foi proposto por E.F. Codd em 1970 e se tornou a base para os sistemas de gerenciamento de banco de dados relacionais (SGBDs), como MySQL, PostgreSQL, Oracle e SQL Server.
 
 Características principais do modelo relacional:
-Tabelas (ou Relações):
-
-Os dados são organizados em tabelas, cada uma representando uma entidade ou conceito (por exemplo, clientes, produtos, pedidos).
+*Tabelas (ou Relações): Os dados são organizados em tabelas, cada uma representando uma entidade ou conceito (por exemplo, clientes, produtos, pedidos).
 Cada tabela é formada por linhas (ou registros) e colunas (ou campos). Cada linha representa um item ou instância de dados, e cada coluna contém uma característica ou atributo dessa entidade.
-Chaves Primárias:
+Chaves Primárias: Cada tabela deve ter uma chave primária, que é uma coluna (ou conjunto de colunas) que identifica de maneira única cada registro na tabela. Por exemplo, o ID do cliente pode ser a chave primária de uma tabela de clientes.
+Chaves Estrangeiras: São colunas que estabelecem relacionamentos entre tabelas. Uma chave estrangeira em uma tabela aponta para a chave primária de outra tabela, formando uma ligação entre elas. Por exemplo, uma tabela de pedidos pode ter uma chave estrangeira que se refere à chave primária da tabela de clientes.
+Integridade Referencial: Garante que os dados nas tabelas sejam consistentes. Isso significa que se uma chave estrangeira aponta para uma chave primária em outra tabela, os dados relacionados devem existir, e não é permitido inserir dados inconsistentes (por exemplo, um pedido para um cliente que não existe).
+Linguagem SQL: O modelo relacional usa a linguagem SQL (Structured Query Language) para interagir com os dados. Através do SQL, é possível realizar consultas, inserir, atualizar e excluir registros nas tabelas.
 
-Cada tabela deve ter uma chave primária, que é uma coluna (ou conjunto de colunas) que identifica de maneira única cada registro na tabela. Por exemplo, o ID do cliente pode ser a chave primária de uma tabela de clientes.
-Chaves Estrangeiras:
-
-São colunas que estabelecem relacionamentos entre tabelas. Uma chave estrangeira em uma tabela aponta para a chave primária de outra tabela, formando uma ligação entre elas. Por exemplo, uma tabela de pedidos pode ter uma chave estrangeira que se refere à chave primária da tabela de clientes.
-Integridade Referencial:
-
-Garante que os dados nas tabelas sejam consistentes. Isso significa que se uma chave estrangeira aponta para uma chave primária em outra tabela, os dados relacionados devem existir, e não é permitido inserir dados inconsistentes (por exemplo, um pedido para um cliente que não existe).
-Linguagem SQL:
-
-O modelo relacional usa a linguagem SQL (Structured Query Language) para interagir com os dados. Através do SQL, é possível realizar consultas, inserir, atualizar e excluir registros nas tabelas.
 Exemplo prático:
 Imagina que temos duas tabelas: uma de clientes e outra de pedidos.
 
