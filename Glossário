@@ -116,3 +116,21 @@ Quando usar microserviços:
 *Quando há a necessidade de permitir desenvolvimento ágil e independente entre as equipes.
 *Para sistemas que precisam ser distribuídos ou que têm demanda variável em partes específicas do sistema.
 Os microserviços são uma das abordagens modernas mais populares para a construção de sistemas escaláveis e flexíveis, especialmente em arquiteturas de nuvem e aplicações de grande escala.
+
+processo de criar a estrutura necessária para armazenar e organizar dados de forma eficiente, segura e consistente. A seguir, as etapas típicas do design de banco de dados:
+
+Modelagem de Dados:
+
+Modelo Conceitual: Criação de um modelo de alto nível, como um diagrama de entidade-relacionamento (ER), para descrever os tipos de dados que o sistema irá manipular e os relacionamentos entre eles.
+Modelo Lógico: Refina o modelo conceitual, transformando-o em uma estrutura mais próxima do que será implementado no banco de dados, especificando tipos de dados, chaves primárias e estrangeiras, e normalização.
+Normalização: Processo de organizar os dados em tabelas para reduzir redundâncias e dependências, garantindo que o banco de dados seja eficiente e fácil de manter.
+
+Escolha do SGBD (Sistema de Gerenciamento de Banco de Dados): Decisão sobre qual sistema utilizar, como MySQL, PostgreSQL, Oracle, MongoDB (para bancos NoSQL), etc.
+
+Criação de Esquemas e Tabelas: Definição das tabelas e esquemas que representarão os dados no banco, incluindo a definição de colunas, tipos de dados, chaves primárias, chaves estrangeiras e índices.
+
+Definição de Procedimentos e Consultas: Criação de consultas SQL, visões e procedimentos armazenados que permitirão acessar, manipular e analisar os dados.
+
+Segurança e Backup: Planejamento das permissões de acesso ao banco de dados, controle de usuários e a estratégia de backup e recuperação de dados.
+
+Performance e Escalabilidade: Considerações sobre como o banco de dados irá escalar conforme o volume de dados aumenta, otimizando consultas e implementando técnicas de indexação.
