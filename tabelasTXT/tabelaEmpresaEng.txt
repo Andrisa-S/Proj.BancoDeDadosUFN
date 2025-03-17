@@ -1,0 +1,15 @@
+Departamento(idDepartamento, nome)
+ProcessadorTexto(idProcessadorTexto, descricao)
+Projeto(idProjeto, descricao)
+Tipo(idTipo, descricao)
+Empregado(idEmpregado, nome, CPF, tipo, CREA(null), gerente(null), departamento)
+	tipo referencia Tipo
+	gerente referencia Empregado
+	departamento referencia Departamento
+
+Secretaria_ProcessadorTexto(secretaria, processador)
+	secretaria referencia Empregado
+	processador referencia ProcessadorTexto
+Engenheiro_Projeto(engenheiro, projeto)
+	engenheiro referencia Empregado
+	projeto referencia Projeto

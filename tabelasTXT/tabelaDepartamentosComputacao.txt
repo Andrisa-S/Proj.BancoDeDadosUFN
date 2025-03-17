@@ -1,0 +1,31 @@
+Departamento(idDepartamento, nome)
+1	Ciência da computação
+2	Sistema de informação
+3	Jogos Digitais
+
+ProcessadorTexto(idProcessador, nome)
+10	Word MS
+20	Star Office
+30	Libre Office
+
+Projeto(idProjeto, descricao)
+100	Longevos
+102	Raquetada dos Amigos
+
+Tipo(idTipo, descricao)
+1001	Gerente
+1002	Secretaria
+1003	Engenheiro
+
+Empregado(idEmpregado, nome, CPF, tipo, CREA, gerente, departamento)
+1	Alexandre, cpf1212, 1001, NULL, NULL, 1
+2	Pedro, cpf2148, 1003, crea65281, 1, 1
+3	Eric, cpf5412, 1002, NULL, 1, 1
+
+Secretaria_Processador(secretaria, processador)
+3	10
+3	20
+
+Engenheiro_Projeto(engenheiro, projeto)
+2,	100
+2,	102
