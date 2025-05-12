@@ -131,6 +131,13 @@ Em um sistema de e-commerce:
 ### 2. Escolha do SGBD
 - Com base nas necessidades: SQL (MySQL, PostgreSQL), NoSQL (MongoDB, etc.)
 
+### 4. Definição de Consultas e Procedimentos
+```sql
+SELECT nome, email FROM cliente;
+
+SELECT COUNT(*) FROM pedido WHERE id_cliente = 1;
+```
+
 ### 3. Criação de Esquemas e Tabelas
 
 ```sql
