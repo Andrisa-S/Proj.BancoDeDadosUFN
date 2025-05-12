@@ -295,7 +295,7 @@ INSERT INTO aluno (alunoId, nome, curso) VALUES
 ```
 ### Consultas Comuns
 - Listar alunos e seus cursos:
-´´´sql
+```sql
 SELECT aluno.nome, curso.nome
 FROM aluno, curso
 WHERE aluno.curso = curso.cursoId;
