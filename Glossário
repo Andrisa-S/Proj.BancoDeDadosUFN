@@ -1,136 +1,309 @@
-*Banco de dados:*
- Sistema organizado para armazenar, gerenciar e recuperar informações de maneira eficiente. Ele permite que dados sejam salvos de forma estruturada e acessados facilmente por usuários ou aplicações.
+# 📚 Banco de Dados
 
-Em termos simples, é como uma grande "biblioteca digital" onde os dados são armazenados e podem ser consultados ou atualizados sempre que necessário. Cada dado é armazenado em tabelas (em bancos de dados relacionais, por exemplo), que são compostas por linhas (registros) e colunas (campos).
+## *Banco de Dados*
+Um banco de dados é um sistema organizado para armazenar, gerenciar e recuperar informações de maneira eficiente. Funciona como uma "biblioteca digital", onde os dados são estruturados em tabelas (no caso dos relacionais), com linhas (registros) e colunas (campos).
 
-Os bancos de dados podem ser de diferentes tipos, como:
+### Tipos de Banco de Dados:
+- **Relacional**: Usa tabelas e a linguagem SQL.  
+  Exemplos: MySQL, PostgreSQL, Oracle.
+- **Não-relacional (NoSQL)**: Usa estruturas flexíveis como documentos, grafos ou chave-valor.  
+  Exemplos: MongoDB, Cassandra, Redis.
 
-- Relacional: Armazenam dados em tabelas e utilizam a linguagem SQL para consultar e manipular as informações. Exemplos: MySQL, PostgreSQL, Oracle.
-- Não-relacional (NoSQL): Usam formatos mais flexíveis para armazenar dados, como documentos, grafos ou chave-valor. Exemplos: MongoDB, Cassandra, Redis.
-Esses sistemas são amplamente usados em diversas áreas, como websites, aplicativos, sistemas financeiros e até em redes sociais. Eles são fundamentais para o funcionamento de praticamente todas as tecnologias que usamos no dia a dia.
+Esses sistemas são fundamentais em websites, aplicativos, sistemas financeiros, redes sociais, etc.
 
-*Sistema gerenciador de Banco de dados (SGBD):*
- Software que facilita a criação, gerenciamento e manutenção de bancos de dados. Ele fornece uma interface para que os usuários possam criar, ler, atualizar e excluir dados (conhecido como operações CRUD) de maneira eficiente, segura e organizada.
+---
 
-O SGBD gerencia a estrutura do banco de dados e garante que os dados sejam armazenados corretamente, acessados rapidamente e que as operações sejam feitas de forma consistente. Além disso, ele lida com questões de segurança, integridade dos dados e controle de concorrência (para que múltiplos usuários possam acessar o banco de dados ao mesmo tempo sem interferir uns nos outros).
+## *Sistema Gerenciador de Banco de Dados (SGBD)*
 
-Funções principais de um SGBD:
-*Armazenamento de Dados: Organiza os dados de forma estruturada para fácil recuperação.
-*Controle de Acesso: Garante que apenas usuários autorizados possam acessar ou modificar os dados.
-*Segurança e Integridade: Protege os dados contra falhas e corrupções, garantindo que os dados sejam consistentes.
-*Consultas e Manipulação de Dados: Permite que os usuários consultem e modifiquem dados usando linguagens como SQL.
-*Backup e Recuperação: Oferece mecanismos para fazer cópias de segurança e restaurar dados em caso de falhas.
- Exemplos de SGBDs:
-- Relacionais: MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server.
-- Não-relacionais (NoSQL): MongoDB, Cassandra, Redis.
-Esses sistemas tornam a gestão de grandes volumes de dados mais eficiente e ajudam na automação de muitas tarefas, facilitando o trabalho de desenvolvedores e administradores de banco de dados.
+Software que permite criar, gerenciar e manter bancos de dados. Ele garante que os dados sejam acessados com segurança, integridade e desempenho, permitindo operações CRUD (Create, Read, Update, Delete).
 
-*Relação entre BD e SGBD:*
- O SGBD é a ferramenta que permite a criação, gerenciamento e interação com o banco de dados. Em outras palavras, o banco de dados é o "armazém" de dados, enquanto o SGBD é o "gerente" que controla como os dados são armazenados, acessados e manipulados.
+### Funções principais de um SGBD:
+- **Armazenamento de Dados**: Estrutura e organiza os dados.
+- **Controle de Acesso**: Garante segurança e autenticação.
+- **Segurança e Integridade**: Protege contra falhas e inconsistências.
+- **Consultas e Manipulação**: Usa SQL para interagir com os dados.
+- **Backup e Recuperação**: Garante disponibilidade dos dados.
 
-Aqui está uma forma mais clara de entender a relação:
+### Exemplos:
+- **Relacionais**: MySQL, PostgreSQL, Oracle, SQL Server.
+- **NoSQL**: MongoDB, Cassandra, Redis.
 
-Banco de Dados: É onde os dados reais são armazenados. Pode ser considerado como um "armazém de informações". Ele pode ser simplesmente um arquivo ou uma coleção de dados organizados, mas não possui funcionalidades de gerenciamento, como controle de acesso, segurança, backup, entre outros.
+---
 
-Sistema Gerenciador de Banco de Dados (SGBD): É o software responsável por gerenciar esse banco de dados. O SGBD oferece as ferramentas necessárias para:
+## *Relação entre Banco de Dados e SGBD*
 
-*Criar o banco de dados e suas estruturas (como tabelas, índices, etc.).
-*Armazenar os dados no banco de dados.
-*Realizar consultas (como consultas SQL) para buscar ou manipular os dados.
-*Controlar o acesso e garantir a segurança dos dados.
-*Garantir a integridade dos dados (impedindo que dados inconsistentes ou corrompidos sejam armazenados).
-*Fazer backup e recuperar dados quando necessário.
- Resumindo: o banco de dados é o local onde as informações ficam guardadas, enquanto o SGBD é o sistema que garante que essas informações sejam bem organizadas, seguras e facilmente acessíveis. O SGBD torna o processo de gerenciamento do banco de dados mais eficiente e acessível para os usuários e aplicativos.
+- **Banco de Dados**: Local onde os dados são armazenados. Ex: arquivos, tabelas.
+- **SGBD**: Sistema que gerencia o banco. Ex: permite criar tabelas, inserir dados, controlar acesso.
 
-*Modelo Relacional de BD:*
- Abordagem para organizar e estruturar dados de forma tabular, em que as informações são armazenadas em tabelas (ou relacionamentos), compostas por linhas e colunas. Esse modelo foi proposto por E.F. Codd em 1970 e se tornou a base para os sistemas de gerenciamento de banco de dados relacionais (SGBDs), como MySQL, PostgreSQL, Oracle e SQL Server.
+### O SGBD oferece ferramentas para:
+- Criar e manter estruturas como tabelas e índices.
+- Armazenar e recuperar dados.
+- Executar consultas (ex: `SELECT` em SQL).
+- Garantir integridade, segurança e desempenho.
 
-Características principais do modelo relacional:
-*Tabelas (ou Relações): Os dados são organizados em tabelas, cada uma representando uma entidade ou conceito (por exemplo, clientes, produtos, pedidos).
-Cada tabela é formada por linhas (ou registros) e colunas (ou campos). Cada linha representa um item ou instância de dados, e cada coluna contém uma característica ou atributo dessa entidade.
-Chaves Primárias: Cada tabela deve ter uma chave primária, que é uma coluna (ou conjunto de colunas) que identifica de maneira única cada registro na tabela. Por exemplo, o ID do cliente pode ser a chave primária de uma tabela de clientes.
-Chaves Estrangeiras: São colunas que estabelecem relacionamentos entre tabelas. Uma chave estrangeira em uma tabela aponta para a chave primária de outra tabela, formando uma ligação entre elas. Por exemplo, uma tabela de pedidos pode ter uma chave estrangeira que se refere à chave primária da tabela de clientes.
-Integridade Referencial: Garante que os dados nas tabelas sejam consistentes. Isso significa que se uma chave estrangeira aponta para uma chave primária em outra tabela, os dados relacionados devem existir, e não é permitido inserir dados inconsistentes (por exemplo, um pedido para um cliente que não existe).
-Linguagem SQL: O modelo relacional usa a linguagem SQL (Structured Query Language) para interagir com os dados. Através do SQL, é possível realizar consultas, inserir, atualizar e excluir registros nas tabelas.
+---
 
-Exemplo prático:
-Imagina que temos duas tabelas: uma de clientes e outra de pedidos.
+## *Modelo Relacional de Banco de Dados*
 
-Tabela de Clientes:
+Modelo baseado em **tabelas** para representar dados, proposto por **E.F. Codd em 1970**.
 
-ID_Cliente	Nome	Email
-1	João	joao@email.com
-2	Maria	maria@email.com
-Tabela de Pedidos:
+### Características:
+- **Tabelas (Relações)**: Conjuntos de registros e campos.
+- **Chaves Primárias**: Identificam unicamente cada registro.
+- **Chaves Estrangeiras**: Ligam tabelas diferentes.
+- **Integridade Referencial**: Garante consistência entre os dados.
+- **SQL**: Linguagem usada para manipular e consultar os dados.
 
-ID_Pedido	Data	ID_Cliente (FK)
-101	2025-02-10	1
-102	2025-02-11	2
-No exemplo acima:
+### 📌 Exemplo Prático
 
-A tabela de clientes contém informações sobre os clientes (ID, nome, email).
-A tabela de pedidos contém informações sobre os pedidos feitos pelos clientes. A coluna ID_Cliente na tabela de pedidos é uma chave estrangeira, que se refere à ID_Cliente na tabela de clientes.
-Vantagens do modelo relacional:
-Simplicidade: O modelo tabular é fácil de entender e trabalhar.
-Flexibilidade: É fácil adicionar novas tabelas e fazer modificações na estrutura sem afetar os dados existentes.
-Consistência: A integridade referencial e as restrições ajudam a manter a consistência dos dados.
-Consultas poderosas: A linguagem SQL oferece uma forma eficiente de consultar dados complexos.
-Esse modelo é amplamente utilizado devido à sua clareza e eficácia em lidar com dados inter-relacionados, sendo ideal para a maioria dos sistemas que exigem a organização de dados em forma de tabelas interconectadas.
+#### Tabela de Clientes:
 
-*Micro Serviço:*
-  Estilo de arquitetura de software em que uma aplicação é dividida em pequenos serviços independentes, que são responsáveis por uma parte específica da funcionalidade do sistema. Esses serviços podem ser desenvolvidos, implementados e escalados de forma separada, comunicando-se entre si via redes, geralmente utilizando APIs (interfaces de programação de aplicativos).
+| ID_Cliente | Nome | Email           |
+|------------|------|------------------|
+| 1          | João | joao@email.com   |
+| 2          | Maria| maria@email.com  |
 
-Cada microserviço tem um foco específico, é autônomo e pode ser desenvolvido em diferentes tecnologias ou linguagens de programação, o que oferece grande flexibilidade para a equipe de desenvolvimento. Esses serviços são geralmente mais simples e menores que as grandes aplicações monolíticas tradicionais, tornando o sistema como um todo mais modular e fácil de manter.
+#### Tabela de Pedidos:
 
-Características principais dos microserviços:
-*Independência: Cada microserviço é uma aplicação autônoma, que pode ser implantada, atualizada e escalada independentemente dos outros. Isso reduz a dependência entre as partes do sistema.
-*Foco em um único domínio: Cada microserviço é responsável por uma única parte do sistema, o que facilita seu entendimento e manutenção. Por exemplo, em um sistema de e-commerce, um microserviço pode ser responsável por processamento de pagamento, enquanto outro pode lidar com o estoque de produtos.
-*Comunicação via APIs: Os microserviços se comunicam entre si por meio de interfaces bem definidas (geralmente APIs RESTful ou mensagens assíncronas), utilizando protocolos como HTTP, AMQP ou Kafka.
-*Escalabilidade: Como cada microserviço pode ser escalado de maneira independente, é possível alocar mais recursos a um serviço específico (como um serviço de pagamentos) sem impactar outros serviços do sistema.
-*Descentralização de dados: Cada microserviço pode ter seu próprio banco de dados, o que promove a independência em termos de armazenamento de dados. Isso é diferente de sistemas monolíticos, onde um banco de dados centralizado é compartilhado entre todas as funcionalidades.
-*Resiliência: Como os microserviços são independentes, se um serviço falhar, não necessariamente o sistema inteiro ficará inativo. Isso facilita a criação de sistemas mais resilientes.
+| ID_Pedido | Data       | ID_Cliente (FK) |
+|-----------|------------|-----------------|
+| 101       | 2025-02-10 | 1               |
+| 102       | 2025-02-11 | 2               |
 
-Vantagens dos microserviços:
-*Escalabilidade independente: É possível escalar apenas as partes do sistema que exigem mais recursos, otimizando custos.
-*Desenvolvimento ágil: Equipes podem trabalhar em diferentes microserviços simultaneamente, sem afetar outras partes do sistema.
-*Flexibilidade tecnológica: Cada microserviço pode ser implementado usando a tecnologia ou linguagem mais adequada para seu contexto, permitindo inovação e escolha de melhores ferramentas.
-*Facilidade de manutenção: Como os serviços são menores e focados em um domínio específico, é mais fácil identificar problemas e realizar manutenções ou atualizações sem afetar o sistema como um todo.
+> `ID_Cliente` na tabela de pedidos é uma **chave estrangeira** que referencia a tabela de clientes.
 
-Desvantagens dos microserviços:
-*Complexidade na gestão: Embora cada microserviço seja independente, a gestão de um grande número de serviços pode ser desafiadora, especialmente em termos de monitoramento, segurança e coordenação entre eles.
-*Comunicação entre serviços: A comunicação entre microserviços pode adicionar latência e complexidade no gerenciamento de falhas ou desempenho.
-*Desafios de consistência de dados: Como cada microserviço pode ter seu próprio banco de dados, garantir a consistência de dados entre eles pode ser mais difícil do que em uma arquitetura monolítica.
+### Vantagens:
+- Simplicidade e clareza.
+- Flexibilidade na manutenção.
+- Integridade e consistência dos dados.
+- Consultas eficientes com SQL.
 
-Exemplo prático:
-Em um site de e-commerce:
+---
 
-*Um microserviço pode ser responsável pela autenticação (login de usuário).
-*Outro pode lidar com pedidos e compras.
-*Outro pode gerenciar o estoque de produtos.
-*Outro pode ser responsável pela cálculo de preços e descontos.
-*E outro pode cuidar do processamento de pagamentos.
-Cada microserviço pode ser desenvolvido e mantido por equipes independentes, o que facilita a evolução e a escalabilidade do sistema.
+## *Microserviço*
 
-Quando usar microserviços:
-*Em sistemas grandes e complexos que precisam de escalabilidade e resiliência.
-*Quando há a necessidade de permitir desenvolvimento ágil e independente entre as equipes.
-*Para sistemas que precisam ser distribuídos ou que têm demanda variável em partes específicas do sistema.
-Os microserviços são uma das abordagens modernas mais populares para a construção de sistemas escaláveis e flexíveis, especialmente em arquiteturas de nuvem e aplicações de grande escala.
+### Definição
+Arquitetura onde a aplicação é dividida em **serviços independentes**, cada um com responsabilidade específica. Eles se comunicam via **APIs**.
 
-processo de criar a estrutura necessária para armazenar e organizar dados de forma eficiente, segura e consistente. A seguir, as etapas típicas do design de banco de dados:
+### Características:
+- **Independência**: Serviços autônomos, fáceis de escalar.
+- **Foco por Domínio**: Cada microserviço cuida de um módulo (ex: login, pedidos).
+- **Comunicação via APIs**: REST, gRPC, Kafka, etc.
+- **Escalabilidade**: Cada serviço pode ser escalado separadamente.
+- **Banco de Dados Descentralizado**: Cada serviço pode ter seu próprio banco.
 
-Modelagem de Dados:
+### Vantagens:
+- Escalabilidade e resiliência.
+- Desenvolvimento ágil com equipes independentes.
+- Flexibilidade tecnológica.
+- Manutenção facilitada.
 
-Modelo Conceitual: Criação de um modelo de alto nível, como um diagrama de entidade-relacionamento (ER), para descrever os tipos de dados que o sistema irá manipular e os relacionamentos entre eles.
-Modelo Lógico: Refina o modelo conceitual, transformando-o em uma estrutura mais próxima do que será implementado no banco de dados, especificando tipos de dados, chaves primárias e estrangeiras, e normalização.
-Normalização: Processo de organizar os dados em tabelas para reduzir redundâncias e dependências, garantindo que o banco de dados seja eficiente e fácil de manter.
+### Desvantagens:
+- Complexidade de gerenciamento.
+- Maior latência e problemas de consistência de dados.
 
-Escolha do SGBD (Sistema de Gerenciamento de Banco de Dados): Decisão sobre qual sistema utilizar, como MySQL, PostgreSQL, Oracle, MongoDB (para bancos NoSQL), etc.
+### 🧩 Exemplo:
+Em um sistema de e-commerce:
+- Microserviço de autenticação
+- Microserviço de estoque
+- Microserviço de pedidos
+- Microserviço de pagamento
 
-Criação de Esquemas e Tabelas: Definição das tabelas e esquemas que representarão os dados no banco, incluindo a definição de colunas, tipos de dados, chaves primárias, chaves estrangeiras e índices.
+---
 
-Definição de Procedimentos e Consultas: Criação de consultas SQL, visões e procedimentos armazenados que permitirão acessar, manipular e analisar os dados.
+## *Processo de Design de Banco de Dados*
 
-Segurança e Backup: Planejamento das permissões de acesso ao banco de dados, controle de usuários e a estratégia de backup e recuperação de dados.
+### 1. Modelagem de Dados
 
-Performance e Escalabilidade: Considerações sobre como o banco de dados irá escalar conforme o volume de dados aumenta, otimizando consultas e implementando técnicas de indexação.
+#### • Modelo Conceitual:
+- Diagrama ER (Entidade-Relacionamento)
+- Foca em entidades e relacionamentos
+
+#### • Modelo Lógico:
+- Estrutura próxima da implementação
+- Define tipos de dados, chaves primárias e estrangeiras
+- Aplica **normalização**
+
+#### • Normalização:
+- Elimina redundância
+- Organiza dados em múltiplas tabelas
+
+### 2. Escolha do SGBD
+- Com base nas necessidades: SQL (MySQL, PostgreSQL), NoSQL (MongoDB, etc.)
+
+### 3. Criação de Esquemas e Tabelas
+
+```sql
+CREATE TABLE cliente (
+    id_cliente INT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100)
+);
+
+CREATE TABLE pedido (
+    id_pedido INT PRIMARY KEY,
+    data DATE,
+    id_cliente INT,
+    FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
+);
+
+SELECT nome, email FROM cliente;
+
+SELECT COUNT(*) FROM pedido WHERE id_cliente = 1;
+```
+### 5. Segurança e Backup
+
+- **Definição de permissões por usuário**: Controle de quem pode acessar e manipular dados.
+- **Políticas regulares de backup e recuperação**: Criação de cópias de segurança e estratégias de restauração em caso de falhas.
+- **Controle de acesso com autenticação e criptografia**: Garantia de que somente usuários autorizados acessem os dados, com proteção contra interceptações.
+
+---
+
+### 6. Performance e Escalabilidade
+
+- **Índices**: Estruturas criadas sobre colunas de tabelas para acelerar o tempo de resposta de consultas.
+- **Particionamento (Sharding)**: Divisão de grandes tabelas ou bancos em partes menores e distribuídas.
+- **Replicação**: Manutenção de cópias dos dados em múltiplos servidores para melhorar disponibilidade e tolerância a falhas.
+- **Monitoramento**: Uso de ferramentas como *Prometheus* e *Grafana* para acompanhar métricas de desempenho e saúde do sistema.
+- **Balanceamento de carga**: Distribuição de requisições entre diversas instâncias de servidores para evitar sobrecarga.
+
+---
+# Banco de Dados Relacional e Projeto de Banco de Dados
+
+## 1. Conceitos Fundamentais
+
+Um **Banco de Dados Relacional** organiza os dados em **tabelas** com colunas (atributos) e linhas (tuplas), permitindo relacionamentos entre elas. Todo banco precisa de um **SGBD** (Sistema Gerenciador de Banco de Dados) e de uma **linguagem de consulta**, como a **SQL**.
+
+O SGBD oferece:
+- Manipulação de dados
+- Segurança
+- Backup
+- Integridade e controle de transações (ACID):
+  - **A**tomicidade
+  - **C**onsistência
+  - **I**solamento
+  - **D**urabilidade
+
+## 2. Linguagens SQL
+
+- **DDL (Data Definition Language)**: criação e modificação da estrutura do banco  
+  Ex: `CREATE`, `DROP`
+
+- **DML (Data Manipulation Language)**: manipulação dos dados  
+  Ex: `SELECT`, `INSERT`, `UPDATE`, `DELETE`
+
+## 3. Modelagem de Banco de Dados
+
+- **Modelagem Conceitual**: diagrama com entidades, atributos e relacionamentos.
+- **Modelagem Lógica**: tabelas, chaves primárias/estrangeiras e relacionamentos (1:1, 1:N, N:M).
+- **Modelagem Física**: tipos de dados, restrições, índices e integridade no SGBD.
+
+**Boas práticas:**
+- Reduzir a quantidade de tabelas quando possível
+- Evitar atributos nulos
+- Manter chaves primárias simples
+
+## 4. Álgebra Relacional em SQL
+
+### Projeção (π) – seleção de colunas
+
+```sql
+SELECT alunoId FROM aluno;
+
+SELECT nome, curso FROM aluno;
+``
+
+### Seleção (σ) – com condição
+
+```sql
+SELECT nome FROM aluno WHERE curso = 1;
+
+SELECT nome, alunoId FROM aluno WHERE curso IS NULL;
+
+SELECT nome, alunoId FROM aluno WHERE curso = 1 OR curso = 3;
+```
+### União (OR lógico)
+
+```sql
+SELECT nome FROM aluno WHERE curso = 1 OR curso = 3;
+```
+
+### Interseção (AND lógico)
+
+```sql
+SELECT nome FROM aluno WHERE curso = 1 AND alunoId > 1000;
+```
+
+### Produto Cartesiano
+
+```sql
+SELECT aluno.nome, curso.nome 
+FROM aluno, curso 
+WHERE aluno.curso = curso.cursoId;
+```
+
+### Junção (JOIN)
+
+```sql
+SELECT aluno.nome, curso.nome 
+FROM aluno 
+INNER JOIN curso ON aluno.curso = curso.cursoId;
+```
+
+## 5. Exemplo Prático com MySQL
+### Criação de Tabelas
+
+```sql
+CREATE TABLE curso (
+    cursoId INT AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    PRIMARY KEY (cursoId),
+    INDEX nomeCurso (nome ASC)
+);
+
+CREATE TABLE aluno (
+    alunoId INT AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    curso INT,
+    PRIMARY KEY (alunoId),
+    INDEX nomeAluno (nome ASC),
+    FOREIGN KEY (curso) REFERENCES curso(cursoId)
+);
+```
+### Inserção de Dados
+
+```sql
+INSERT INTO curso (cursoId, nome) VALUES 
+(1, 'Ciência da Computação'),
+(2, 'Sistemas de Informação'),
+(3, 'Jogos Digitais');
+
+INSERT INTO aluno (alunoId, nome, curso) VALUES
+(1000, 'Andrisa Santos', 1),
+(1001, 'Gabriel Gonzalez', 1),
+(1002, 'Matheus Rossatto', 2),
+(1003, 'Iuri Lima', 3),
+(1004, 'Gabriela Martins', 3),
+(1005, 'Nadine Rosa', NULL);
+```
+### Consultas Comuns
+- Listar alunos e seus cursos:
+´´´sql
+SELECT aluno.nome, curso.nome
+FROM aluno, curso
+WHERE aluno.curso = curso.cursoId;
+```
+- Alunos do curso "Ciência da Computação":
+```sql
+SELECT aluno.nome
+FROM aluno, curso
+WHERE curso.nome = 'Ciência da Computação' 
+  AND curso.cursoId = aluno.curso;
+```
+- Quantidade de alunos no curso "Ciência da Computação":
+```sql
+SELECT COUNT(*)
+FROM aluno, curso
+WHERE curso.nome = 'Ciência da Computação' 
+  AND curso.cursoId = aluno.curso;
+```
